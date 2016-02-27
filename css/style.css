@@ -61,6 +61,15 @@ p :last-child {
           .site-header-nav .menu-item > a {
             text-decoration: none !important;
             color: #90091f; }
+  .site-footer {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 1em;
+    background: #e0e2db;
+    text-align: center; }
+    .site-footer-copyright {
+      font-size: .8em;
+      font-weight: 300; }
 
 .page-header-title {
   font-size: 1.6em;
