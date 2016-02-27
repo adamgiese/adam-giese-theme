@@ -10,5 +10,8 @@
     <?php the_content(); ?>
   </article>
   <?php } } ?>
+  <aside class="page-sidebar">
+    <?php echo get_sidebar('main-sidebar'); ?>
+  </aside>
 </main>
 <?php get_footer(); ?>

@@ -10,6 +10,20 @@ function adam_giese_setup() {
   register_nav_menu('primary', 'Primary Menu');
 }
 
+//add widgets
+add_action( 'widgets_init', 'adam_giese_widgets_init' );
+function adam_giese_widgets_init() {
+  register_sidebar( array(
+    'name'          => 'Main Sidebar',
+    'id'            => 'main-sidebar',
+    'description'   => 'Widgets here will appear on the main sidebar.',
+    'before_widget' => '<div class="page-sidebar-content">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="page-sidebar-title">',
+    'after_title'   => '</h2>',
+  ) );
+}
+
 //scripts & styles
 add_action( 'wp_enqueue_scripts', 'adam_giese_scripts_and_styles' );
 function adam_giese_scripts_and_styles() {

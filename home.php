@@ -11,9 +11,7 @@
     <?php } } ?>
   </div>
   <aside class="page-sidebar">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
-
-<p>Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla quis lorem ut libero malesuada feugiat.</p>
+    <?php echo get_sidebar('main-sidebar'); ?>
   </aside>
 </main>
 <?php get_footer(); ?>
