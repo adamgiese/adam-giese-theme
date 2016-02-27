@@ -1,0 +1,120 @@
+//fonts
+@font-face {
+  font-family: Butler;
+  src: url('../fonts/Butler/Butler_Bold.otf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Butler;
+  src: url('../fonts/Butler/Butler_Medium.otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Butler;
+  src: url('../fonts/Butler/Butler_Light.otf');
+  font-weight: 300;
+}
+
+//elements
+
+body {
+  font-family: $sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//styling
+.site {
+  margin: 0 auto;
+
+  &-header {
+    background-color: $header-background;
+    color: black;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    max-width: $site-width;
+    padding: 1em;
+
+    &-title {
+      font-family: $serif;
+      font-size: 2em;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      
+      a {
+        text-decoration: none !important;
+        color: $site-accent;
+      }
+    }
+
+    &-nav {
+      flex: 1 0 auto;
+
+      .menu {
+        padding: 0;
+
+        &-item {
+          display: block;
+          margin: 1em;
+          text-align: center;
+          font-weight: bold;
+          text-transform: uppercase;
+
+          > a {
+            text-decoration: none !important;
+            color: $site-accent;
+
+          }
+        }
+      }
+    }
+  }
+}
+.page {
+  &-header {
+    &-title {
+      font-size: 1.6em;
+      color: $dark-gray-color;
+      text-align: center;
+      margin: .2em auto;
+    }
+  }
+  &-content {
+    max-width: $site-width;
+    margin: 0 auto;
+
+    .archive & {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &-article {
+    .archive & {
+      width: $site-width/3 - 12px; 
+      flex-flow: row-wrap;
+      max-width: 100%;
+      text-align: center;
+      background: $dark-gray-color;
+      padding: 2em;
+      min-height: 200px;
+      margin: 6px;
+    }
+    &-title {
+      font-family: $serif;
+      font-size: 1.4em;
+      color: $light-gray-color;
+    }
+    &-date {
+      color: $light-gray-color;
+    }
+  }
+}

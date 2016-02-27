@@ -1,0 +1,100 @@
+@font-face {
+  font-family: Butler;
+  src: url("../fonts/Butler/Butler_Bold.otf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: Butler;
+  src: url("../fonts/Butler/Butler_Medium.otf");
+  font-weight: 500; }
+
+@font-face {
+  font-family: Butler;
+  src: url("../fonts/Butler/Butler_Light.otf");
+  font-weight: 300; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.site {
+  margin: 0 auto; }
+  .site-header {
+    background-color: #e0e2db;
+    color: black;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 1em; }
+    .site-header-title {
+      font-family: "Butler", serif;
+      font-size: 2em;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase; }
+      .site-header-title a {
+        text-decoration: none !important;
+        color: #90091f; }
+    .site-header-nav {
+      flex: 1 0 auto; }
+      .site-header-nav .menu {
+        padding: 0; }
+        .site-header-nav .menu-item {
+          display: block;
+          margin: 1em;
+          text-align: center;
+          font-weight: bold;
+          text-transform: uppercase; }
+          .site-header-nav .menu-item > a {
+            text-decoration: none !important;
+            color: #90091f; }
+
+.page-header-title {
+  font-size: 1.6em;
+  color: #666;
+  text-align: center;
+  margin: .2em auto; }
+
+.page-content {
+  max-width: 1000px;
+  margin: 0 auto; }
+  .archive .page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+
+.archive .page-article {
+  width: 321.33333px;
+  flex-flow: row-wrap;
+  max-width: 100%;
+  text-align: center;
+  background: #666;
+  padding: 2em;
+  min-height: 200px;
+  margin: 6px; }
+
+.page-article-title {
+  font-family: "Butler", serif;
+  font-size: 1.4em;
+  color: #e0e2db; }
+
+.page-article-date {
+  color: #e0e2db; }
+
+@media only screen and (min-width: 768px) {
+  .site-header {
+    display: flex;
+    align-items: center; }
+    .site-header-nav .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+      .site-header-nav .menu-item {
+        margin: 0 1em; } }
