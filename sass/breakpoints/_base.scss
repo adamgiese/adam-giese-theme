@@ -30,6 +30,15 @@ html {
   box-sizing: inherit;
 }
 
+p {
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
 //styling
 .site {
   margin: 0 auto;
@@ -92,12 +101,33 @@ html {
     margin: 0 auto;
 
     .archive & {
-      display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
   }
   &-article {
+    padding: 1em;
+
+    &-container {
+      flex: 1 0 auto;
+    }
+
+    &-excerpt {
+      color: black;
+
+      p {
+        margin: 0;
+        line-height: 1.4;
+      }
+    }
+
+    .home & {
+      color: $site-accent;
+      background: $light-gray-color;
+      padding: 1em;
+      margin: 1em 0;
+    }
+
     .archive & {
       width: $site-width/3 - 12px; 
       flex-flow: row-wrap;
@@ -106,15 +136,43 @@ html {
       background: $dark-gray-color;
       padding: 2em;
       min-height: 200px;
-      margin: 6px;
+      margin: 6px auto;
     }
     &-title {
       font-family: $serif;
       font-size: 1.4em;
-      color: $light-gray-color;
+      
+      a {
+        color: $light-gray-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        .home & {
+          color: $dark-gray-color;
+        }
+      }
+
+      .home & {
+        margin: 0 0 1em;
+      }
     }
     &-date {
       color: $light-gray-color;
+
+      .home & {
+        color: $dark-gray-color;
+        font-weight: bold;
+        margin-top: 1em;
+        display: block;
+      }
     }
+  }
+  &-sidebar {
+    padding: 1em 2em;
+    background: $light-gray-color;
+    margin: 1em 0;
   }
 }
