@@ -169,7 +169,8 @@ p {
 
     .archive & {
       width: $site-width/3 - 12px; 
-      flex-flow: row-wrap;
+      display: flex;
+      flex-direction: column;
       max-width: 100%;
       text-align: center;
       background: $dark-gray-color;
@@ -196,6 +197,10 @@ p {
 
       .home & {
         margin: 0 0 1em;
+      }
+      .archive & {
+        flex: 1 1 auto;
+        color: $light-gray-color;
       }
     }
     &-date {

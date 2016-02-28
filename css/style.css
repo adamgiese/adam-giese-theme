@@ -118,7 +118,8 @@ p :last-child {
       margin-bottom: 0; }
   .archive .page-article {
     width: 329.33333px;
-    flex-flow: row-wrap;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     text-align: center;
     background: #666;
@@ -137,6 +138,9 @@ p :last-child {
         color: #666; }
     .home .page-article-title {
       margin: 0 0 1em; }
+    .archive .page-article-title {
+      flex: 1 1 auto;
+      color: #e0e2db; }
   .page-article-date {
     color: #e0e2db; }
     .home .page-article-date {
