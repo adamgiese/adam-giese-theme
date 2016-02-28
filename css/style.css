@@ -24,6 +24,10 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
 p :first-child {
   margin-top: 0; }
 
@@ -88,6 +92,14 @@ p :last-child {
   padding: 1em; }
   .page-article-container {
     flex: 1 0 auto; }
+  .page-article h1, .page-article h2, .page-article h3, .page-article h4, .page-article h5, .page-article h6 {
+    margin: 4px 0; }
+  .page-article h3 {
+    padding-bottom: 4px;
+    font-size: 1.4em;
+    font-family: "Butler", serif;
+    font-weight: 700;
+    border-bottom: 2px solid #90091f; }
   .page-article-excerpt {
     color: black; }
     .page-article-excerpt p {

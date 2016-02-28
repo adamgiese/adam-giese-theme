@@ -30,6 +30,11 @@ html {
   box-sizing: inherit;
 }
 
+h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 p {
   :first-child {
     margin-top: 0;
@@ -122,6 +127,17 @@ p {
 
     &-container {
       flex: 1 0 auto;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin: 4px 0;
+    }
+
+    h3 {
+      padding-bottom: 4px;
+      font-size: 1.4em;
+      font-family: $serif;
+      font-weight: 700;
+      border-bottom: 2px solid $site-accent;
     }
 
     &-excerpt {
