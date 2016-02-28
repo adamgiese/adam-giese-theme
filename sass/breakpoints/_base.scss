@@ -56,6 +56,10 @@ p {
     max-width: $site-width;
     padding: 1em;
 
+    .home & {
+      margin-bottom: 1em;
+    }
+
     &-title {
       font-family: $serif;
       font-size: 2em;
@@ -111,11 +115,12 @@ p {
       color: $dark-gray-color;
       text-align: center;
       margin: .2em auto;
+      max-width: $site-width;
     }
   }
   &-content {
     max-width: $site-width;
-    margin: 0 auto;
+    margin: 0 auto 1em;
 
     .archive & {
       flex-wrap: wrap;
@@ -150,10 +155,16 @@ p {
     }
 
     .home & {
-      color: $site-accent;
       background: $article-background;
       padding: 1em;
       margin: 1em 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .archive & {
@@ -201,6 +212,5 @@ p {
   &-sidebar {
     padding: 1em 2em;
     background: $widget-background;
-    margin: 1em 0;
   }
 }
