@@ -7,6 +7,7 @@ add_action('init', 'adam_giese_setup');
 function adam_giese_setup() {
   //navigation
   add_theme_support('menus');
+  add_theme_support( 'post-thumbnails', array( 'post', 'page') );
   register_nav_menu('primary', 'Primary Menu');
 }
 
