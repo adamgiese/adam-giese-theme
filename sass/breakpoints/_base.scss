@@ -209,6 +209,7 @@ p {
     }
     &-date {
       color: $light-gray-color;
+      letter-spacing: .5px;
 
       .home & {
         color: $dark-gray-color;

@@ -144,7 +144,8 @@ p :last-child {
       flex: 1 1 auto;
       color: #e0e2db; }
   .page-article-date {
-    color: #e0e2db; }
+    color: #e0e2db;
+    letter-spacing: .5px; }
     .home .page-article-date {
       color: #666;
       font-weight: bold;
