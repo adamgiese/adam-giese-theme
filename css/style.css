@@ -83,6 +83,8 @@ p :last-child {
   text-align: center;
   margin: .2em auto;
   max-width: 1024px; }
+  .archive .page-header-title {
+    margin-bottom: 0; }
 
 .page-content {
   max-width: 1024px;
