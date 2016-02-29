@@ -4,7 +4,16 @@
 </header>
 <main class="page-content">
   <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
-      <article class="page-article">
+      <?php 
+        $tags = wp_get_post_terms(get_the_ID()); 
+        $tag_class = '';
+        foreach ($tags as $tag) {
+          $name = $tag->name;
+          $slug = $tag->slug;
+          $tag_class = $tag_class . " $slug";
+        }
+      ?>
+      <article class="page-article<?php echo $tag_class; ?>">
         <h2 class="page-article-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
         <span class="page-article-date"><?php echo get_the_date(); ?></span>
       </article>
