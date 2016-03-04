@@ -77,6 +77,23 @@ p :last-child {
       font-size: .8em;
       font-weight: 300; }
 
+.archive-filter {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center; }
+  .archive-filter-button {
+    margin: 4px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 4px;
+    border: none;
+    padding: .5em 1em; }
+    .archive-filter-button.empty {
+      display: none; }
+    .archive-filter-button.active {
+      background: #90091f;
+      color: #e0e2db; }
+
 .page-header-title {
   font-size: 1.6em;
   color: #666;
@@ -120,7 +137,7 @@ p :last-child {
       margin-bottom: 0; }
   .archive .page-article {
     width: 329.33333px;
-    display: flex;
+    display: none;
     flex-direction: column;
     max-width: 100%;
     text-align: center;
@@ -128,6 +145,8 @@ p :last-child {
     padding: 2em;
     min-height: 200px;
     margin: 6px auto; }
+    .archive .page-article.active {
+      display: flex !important; }
   .page-article-title {
     font-family: "Butler", serif;
     font-size: 1.4em; }

@@ -108,6 +108,30 @@ p {
     }
   }
 }
+.archive {
+  &-filter {
+    max-width: $site-width;
+    margin: 0 auto;
+    text-align: center;
+
+    &-button {
+      margin: 4px;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 4px;
+      border: none;
+      padding: .5em 1em;
+
+      &.empty {
+        display: none;
+      }
+      &.active {
+        background: $site-accent;
+        color: $light-gray-color;
+      }
+    }
+  }
+}
 .page {
   &-header {
     &-title {
@@ -173,7 +197,7 @@ p {
 
     .archive & {
       width: $site-width/3 - 12px; 
-      display: flex;
+      display: none;
       flex-direction: column;
       max-width: 100%;
       text-align: center;
@@ -181,6 +205,10 @@ p {
       padding: 2em;
       min-height: 200px;
       margin: 6px auto;
+
+      &.active {
+        display: flex !important;
+      }
     }
     &-title {
       font-family: $serif;

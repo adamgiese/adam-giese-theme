@@ -1,6 +1,16 @@
 <?php get_header(); ?>
 <header class="page-header">
   <?php the_archive_title( '<h1 class="page-header-title">', '</h1>' ); ?>
+  <div class="archive-filter">
+  <?php
+    $tags = get_terms();
+    foreach ($tags as $tag) {
+      $name = $tag->name;
+      $slug = $tag->slug;
+      echo "<button data-slug='$slug' class='archive-filter-button' id='archive-filter-button-$slug'>$name</button>";
+    }
+  ?>
+  </div>
 </header>
 <main class="page-content">
   <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>

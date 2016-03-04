@@ -28,6 +28,9 @@ function adam_giese_widgets_init() {
 //scripts & styles
 add_action( 'wp_enqueue_scripts', 'adam_giese_scripts_and_styles' );
 function adam_giese_scripts_and_styles() {
+  wp_register_script( 'adam-giese-script', get_stylesheet_directory_uri() . '/js/script.js', array('jquery'), '' );
+
+  wp_enqueue_script( 'adam-giese-script' );
   wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' );
   wp_enqueue_style( 'adam-giese-style', get_template_directory_uri() . '/css/style.css' );
 }
