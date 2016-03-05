@@ -146,7 +146,9 @@ p :last-child {
     min-height: 200px;
     margin: 6px auto; }
     .archive .page-article.active {
-      display: flex !important; }
+      display: flex; }
+  .archive .show-all > .page-article {
+    display: flex; }
   .page-article-title {
     font-family: "Butler", serif;
     font-size: 1.4em; }

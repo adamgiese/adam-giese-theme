@@ -2,13 +2,19 @@ jQuery(document).ready(function($) {
   //archive-filter
   var aegFilter = {};
   aegFilter.addFilter = function(slug) {
+    $('.page-content').removeClass('show-all');
     $('#archive-filter-button-' + slug).addClass('active');
     $('.page-article.' + slug).addClass('active');
   }
 
   aegFilter.removeFilter = function(slug) {
+    if ( $('.archive-filter-button.active').length ) {
+      $('.page-content').addClass('show-all');
+    }
+
     $('#archive-filter-button-' + slug).removeClass('active');
     $('.page-article.' + slug).removeClass('active');
+
   }
 
   aegFilter.init = function() {
@@ -23,6 +29,7 @@ jQuery(document).ready(function($) {
   
   $('.archive-filter-button').click(function() {
     var slug = $(this).data('slug');
+
     if ( $(this).hasClass('active') ) {
       aegFilter.removeFilter(slug);
     } else {

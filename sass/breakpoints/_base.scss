@@ -207,8 +207,11 @@ p {
       margin: 6px auto;
 
       &.active {
-        display: flex !important;
+        display: flex;
       }
+    }
+    .archive .show-all > & {
+      display: flex;
     }
     &-title {
       font-family: $serif;

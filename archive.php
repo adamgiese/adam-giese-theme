@@ -12,7 +12,7 @@
   ?>
   </div>
 </header>
-<main class="page-content">
+<main class="page-content show-all">
   <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
       <?php 
         $tags = wp_get_post_terms(get_the_ID()); 
